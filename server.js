@@ -134,14 +134,16 @@ app.delete("/api/distinctions/:type/:index", (req, res) => {
   res.json({ success: true });
 });
 
-app.get("*", (req, res) => {
+app.get("/*", (req, res) => {
     res.sendFile(path.join(__dirname, "public", "index.html"));
 });
+
 
 // ---------- SERVER ----------
 app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
 });
+
 
 
 
