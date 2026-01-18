@@ -208,7 +208,8 @@ const group =
             main.innerHTML = content[section][group];
         }
         if (section === "distinctions") {
-    fetch(`http://localhost:3000/api/distinctions/${group}`)
+        fetch(`/api/distinctions/${group}`)
+
         .then(res => res.json())
         .then(data => {
 
@@ -252,7 +253,7 @@ const group =
 }
 
         if (section === "links") {
-            fetch(`http://localhost:3000/api/links/${group}`)
+            fetch(`/api/links/${group}`)
             .then(res => res.json())
             .then(data => {
              let html = `
@@ -316,7 +317,8 @@ function renderAdminPanel() {
             return;
         }
 
-        fetch("http://localhost:3000/api/links", {
+        fetch("/api/links", {
+
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ title, url, type })
@@ -359,7 +361,8 @@ function renderAdminPanel() {
             return;
         }
 
-        fetch("http://localhost:3000/api/distinctions", {
+        fetch("/api/distinctions", {
+
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ year, event, medal, type })
@@ -390,7 +393,7 @@ loginBtn.addEventListener("click", () => {
         const username = document.getElementById("user").value;
         const password = document.getElementById("pass").value;
 
-        fetch("http://localhost:3000/api/login", {
+        fetch("/api/login", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ username, password })
@@ -427,7 +430,8 @@ function loadAdminLinks() {
     container.innerHTML = "";
 
     ["videos", "interviews", "articles"].forEach(type => {
-        fetch(`http://localhost:3000/api/links/${type}`)
+            fetch(`/api/links/${type}`)
+
             .then(res => res.json())
             .then(data => {
                 const section = document.createElement("div");
@@ -456,7 +460,8 @@ function loadAdminDist() {
   box.innerHTML = "";
 
   ["olympic", "world", "european"].forEach(type => {
-    fetch(`http://localhost:3000/api/distinctions/${type}`)
+    fetch(`/api/distinctions/${type}`)
+
       .then(res => res.json())
       .then(data => {
         box.innerHTML += `<h4>${type}</h4>`;
@@ -471,7 +476,7 @@ function loadAdminDist() {
 }
 
 function deleteDist(type, index) {
-  fetch(`http://localhost:3000/api/distinctions/${type}/${index}`, {
+  fetch(`/api/distinctions/${type}/${index}`, {
     method: "DELETE"
   }).then(() => loadAdminDist());
 }
@@ -483,7 +488,7 @@ if (e.target.classList.contains("deleteLinkBtn")) {
     const type = e.target.dataset.type;
     const index = e.target.dataset.index;
 
-    fetch(`http://localhost:3000/api/links/${type}/${index}`, {
+    fetch(`/api/links/${type}/${index}`, {
         method: "DELETE"
     })
     .then(res => res.json())
@@ -494,3 +499,4 @@ if (e.target.classList.contains("deleteLinkBtn")) {
 }
 
 });
+
