@@ -9,7 +9,7 @@ const user = require("./auth/users.json");
 const distinctions = require("./data/distinctions.json");
 const links = require("./data/links.json");
 
-// ---------- MIDDLEWARE ----------
+
 app.use(express.json());
 app.use((req, res, next) => {
     res.setHeader("Access-Control-Allow-Origin", "*");
@@ -18,12 +18,9 @@ app.use((req, res, next) => {
     next();
 });
 
-// ---------- TEST ----------
-app.get("/", (req, res) => {
-    res.send("Server is running");
-});
 
-// ---------- GET DATA ----------
+
+
 app.get("/api/distinctions/:type", (req, res) => {
     const type = req.params.type;
     res.json(distinctions[type] || []);
@@ -51,7 +48,6 @@ app.delete("/api/links/:type/:index", (req, res) => {
 });
 
 
-// ---------- AUTH ----------
 app.post("/api/login", (req, res) => {
     const { username, password } = req.body;
 
@@ -62,9 +58,7 @@ app.post("/api/login", (req, res) => {
     }
 });
 
-// ===============================
-// ADMIN CRUD - LINKS
-// ===============================
+=
 
 // ➕ Προσθήκη νέου link
 app.post("/api/links", (req, res) => {
@@ -142,3 +136,4 @@ app.delete("/api/distinctions/:type/:index", (req, res) => {
 app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
 });
+
