@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
+
 
 const fs = require("fs");
 const path = require("path");
@@ -18,6 +19,7 @@ app.use((req, res, next) => {
     next();
 });
 
+app.use(express.static(path.join(__dirname, "public")));
 
 
 
@@ -132,8 +134,13 @@ app.delete("/api/distinctions/:type/:index", (req, res) => {
   res.json({ success: true });
 });
 
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "public", "index.html"));
+});
+
 // ---------- SERVER ----------
 app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
 });
+
 
