@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Λευτέρης Πετρούνιας</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Λευτέρης Πετρούνιας</h1>
+        <p>Βιογραφία Έλληνα αθλητή ενόργανης γυμναστικής</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#" data-section="bio">Βιογραφία</a></li>
+            <li><a href="#" data-section="photos">Φωτογραφίες</a></li>
+            <li><a href="#" data-section="distinctions">Διακρίσεις</a></li>
+            <li><a href="#" data-section="links">Σύνδεσμοι</a></li>
+            <li><a href="#" data-section="admin">Διαχείριση</a></li>
+        </ul>
+    </nav>
+
+    <aside>
+       
+        <div id="aside-bio" class="aside-section hidden">
+            <h3>Βιογραφία</h3>
+            <ul>
+                <li><a href="#" data-group="early">Πρώτα χρόνια</a></li>
+                <li><a href="#" data-group="career">Καριέρα</a></li>
+                <li><a href="#" data-group="highlights">Highlights</a></li>
+            </ul>
+        </div>
+
+        <div id="aside-photos" class="aside-section hidden">
+            <h3>Φωτογραφίες</h3>
+            <ul>
+                <li><a href="#" data-group="olympics">Ολυμπιακοί</a></li>
+                <li><a href="#" data-group="world">Παγκόσμια</a></li>
+                <li><a href="#" data-group="training">Προπονήσεις</a></li>
+            </ul>
+        </div>
+
+        <div id="aside-distinctions" class="aside-section hidden">
+            <h3>Διακρίσεις</h3>
+            <ul>
+                <li><a href="#" data-dist="olympic">Ολυμπιακοί Αγώνες</a></li>
+                <li><a href="#" data-dist="world">Παγκόσμια Πρωταθλήματα</a></li>
+                <li><a href="#" data-dist="european">Ευρωπαϊκά Πρωταθλήματα</a></li>
+            </ul>
+        </div>
+
+        <div id="aside-links" class="aside-section hidden">
+            <h3>Σύνδεσμοι</h3>
+            <ul>
+                <li><a href="#" data-group="videos">Βίντεο</a></li>
+                <li><a href="#" data-group="interviews">Συνεντεύξεις</a></li>
+                <li><a href="#" data-group="articles">Άρθρα</a></li>
+            </ul>
+
+        </div>
+
+        <div id="aside-admin" class="aside-section hidden">
+            <h3>Διαχείριση</h3>
+            <ul>
+                              
+                <li><a href="#" id="loginBtn">Σύνδεση</a></li>
+                <li><a href="#" id="logoutBtn" style="display:none;">Αποσύνδεση</a></li>
+
+            </ul>
+        </div>
+
+
+
+    </aside>
+
+    <main>
+        <p>Επιλέξτε μια ενότητα από το μενού.</p>
+        <div id="dist-olympics" class="dist-content hidden">
+            <h2>Ολυμπιακοί Αγώνες</h2>
+
+            <table class="awards-table">
+                <thead>
+                <tr>
+                    <th>Έτος</th>
+                    <th>Διοργάνωση</th>
+                    <th>Αγώνισμα</th>
+                    <th>Θέση</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>2016</td>
+                    <td>Ρίο ντε Τζανέιρο</td>
+                    <td>Κρίκοι</td>
+                    <td>🥇 1η</td>
+                </tr>
+                <tr>
+                    <td>2020</td>
+                    <td>Τόκιο</td>
+                    <td>Κρίκοι</td>
+                    <td>🥉 3η</td>
+                </tr>
+                <tr>
+                    <td>2024</td>
+                    <td>Παρίσι</td>
+                    <td>Κρίκοι</td>
+                    <td>🥉 3η</td>
+                </tr>
+                </tbody>
+            </table>
+            </div>
+
+    </main>
+
+    <footer>
+        <p>© 2026 – Εργασία Web Development</p>
+    </footer>
+
+    <script src="./js/app.js"></script>
+
+
+</body>
+</html>

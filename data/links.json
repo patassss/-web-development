@@ -1,0 +1,32 @@
+{
+  "videos": [
+    {
+      "title": "ΡΙΜΙΝΙ 2024 – Τελικός Ευρωπαϊκού Πρωταθλήματος (Κρίκοι)",
+      "url": "https://www.youtube.com/watch?v=A48V00_U5CM"
+    },
+    {
+      "title": "ΑΜΒΕΡΣΑ 2023 – Τελικός Παγκόσμιου Πρωταθλήματος (Κρίκοι)",
+      "url": "https://www.youtube.com/watch?v=TgmC5w42CR4"
+    }
+  ],
+  "interviews": [
+    {
+      "title": "Ο Ολυμπιονίκης Λευτέρης Πετρούνιας μιλάει για τη ζωή του, τον αθλητισμό & την οικογένειά του",
+      "url": "https://www.youtube.com/watch?v=fenlVkUa5aA"
+    },
+    {
+      "title": "ΣΥΝΕΝΤΕΥΞΗ «ΤΕΤ-Α-ΤΕΤ» με τον Λευτέρη Πετρούνια",
+      "url": "https://www.youtube.com/watch?v=4o2NUUnZKr0"
+    }
+  ],
+  "articles": [
+    {
+      "title": "Άρθρο για τον Λευτέρη Πετρούνια (Wikipedia)",
+      "url": "https://el.wikipedia.org/wiki/%CE%9B%CE%B5%CF%85%CF%84%CE%AD%CF%81%CE%B7%CF%82_%CE%A0%CE%B5%CF%84%CF%81%CE%BF%CF%8D%CE%BD%CE%B9%CE%B1%CF%82"
+    },
+    {
+      "title": "Λευτέρης Πετρούνιας: Πρωταθλητής Ευρώπης για 8η φορά στους κρίκους (protothema.gr)",
+      "url": "https://www.protothema.gr/sports/article/1647776/live-o-telikos-tou-leuteri-petrounia-sto-europaiko/"
+    }
+  ]
+}
